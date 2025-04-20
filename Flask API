@@ -1,0 +1,7 @@
+@app.route('/evaluate', methods=['POST'])
+def evaluate():
+    data = request.json
+    return jsonify({
+        'output': f"模型[{data['model']}]的评估结果",
+        'metrics': {'accuracy': 0.92}
+    })
